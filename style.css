@@ -1,0 +1,174 @@
+/* General setup */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Rainbow banner */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Blue bar overlay */
+.blue-bar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 25%;
+  background: #00274C; /* UMich Blue */
+  color: white;
+  padding: 40px 60px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo + Title */
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  height: 100px;
+  width: auto;
+  border-radius: 50%; /* optional: makes logo round */
+  object-fit: contain;
+}
+
+.site-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Navigation + Search */
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 8px;
+}
+
+nav a:hover {
+  color: #FFCB05; /* maize hover */
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-box input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #FFCB05; /* maize button */
+  color: #00274C;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: white;
+  color: #00274C;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  margin: 30px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #00274C;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 8px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #FFCB05;
+}
+
+/* Subscribe button */
+.subscribe {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #00274C;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #FFCB05;
+  color: #00274C;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #00274C;
+  color: white;
+  margin-top: 30px;
+}
