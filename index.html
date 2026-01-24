@@ -8,18 +8,18 @@
 </head>
 
 <body>
-  <!-- HERO: rainbow background + long blue bar overlay -->
+  <!-- HERO -->
   <header class="hero" id="home">
     <img src="spectrum-banner.png" alt="Rainbow Banner" class="banner" />
 
     <div class="blue-bar">
       <div class="branding">
         <img src="ostem-logo.png" alt="oSTEM Logo" class="header-logo" />
-        <!-- clickable title to go back to top -->
         <a href="#home" class="site-title">oSTEM @ UMich</a>
       </div>
 
-      <div class="nav-search">
+      <!-- NAV ABOVE SEARCH (so the bar can be shorter) -->
+      <div class="right-stack">
         <nav class="top-nav">
           <a href="#quick">Explore</a>
           <a href="#resources">Resources</a>
@@ -35,27 +35,33 @@
   </header>
 
   <main>
-    <!-- QUICK ACTION TILES (Spectrum-style row of 3) -->
+    <!-- QUICK ACTION TILES -->
     <section class="quick" id="quick" aria-label="Quick actions">
       <div class="tile-grid">
-        <a class="tile filter-item" href="https://calendar.google.com/calendar/u/1?cid=dW1pY2guZWR1X3FlMWJucjh1cHJlNTFiYWhnaDluM2luYmNnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank" rel="noreferrer" data-filter="upcoming events calendar">
+        <a class="tile filter-item"
+           href="https://calendar.google.com/calendar/u/1?cid=dW1pY2guZWR1X3FlMWJucjh1cHJlNTFiYWhnaDluM2luYmNnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+           target="_blank" rel="noreferrer" data-filter="upcoming events calendar">
           <div class="tile-media tile-media--one"></div>
           <div class="tile-label">Upcoming events</div>
         </a>
 
-        <a class="tile filter-item" href="https://spectrumcenter.umich.edu/education-resources" target="_blank" rel="noreferrer" data-filter="find group organization orgs">
+        <a class="tile filter-item"
+           href="https://spectrumcenter.umich.edu/education-resources"
+           target="_blank" rel="noreferrer" data-filter="find group organization orgs">
           <div class="tile-media tile-media--two"></div>
           <div class="tile-label">Find a group or organization</div>
         </a>
 
-        <a class="tile filter-item" href="https://www.instagram.com/ostem_um/" target="_blank" rel="noreferrer" data-filter="visit ostem instagram">
+        <a class="tile filter-item"
+           href="https://www.instagram.com/ostem_um/"
+           target="_blank" rel="noreferrer" data-filter="visit ostem instagram">
           <div class="tile-media tile-media--three"></div>
           <div class="tile-label">Visit oSTEM</div>
         </a>
       </div>
     </section>
 
-    <!-- ABOUT (Spectrum-style: left text + right buttons) -->
+    <!-- ABOUT -->
     <section class="about" aria-label="About oSTEM">
       <div class="about-grid">
         <div class="about-text">
@@ -67,17 +73,21 @@
         </div>
 
         <div class="about-actions">
-          <a class="btn btn--primary filter-item" href="https://discord.gg/9WTUxWvD" target="_blank" rel="noreferrer" data-filter="discord join">
+          <a class="btn btn--primary filter-item"
+             href="https://discord.gg/9WTUxWvD"
+             target="_blank" rel="noreferrer" data-filter="discord join">
             Join Discord
           </a>
-          <a class="btn btn--danger filter-item" href="https://spectrumcenter.umich.edu/student-support/crisis-response" target="_blank" rel="noreferrer" data-filter="crisis emergency help">
+          <a class="btn btn--danger filter-item"
+             href="https://spectrumcenter.umich.edu/student-support/crisis-response"
+             target="_blank" rel="noreferrer" data-filter="crisis emergency help">
             In crisis? Get help now
           </a>
         </div>
       </div>
     </section>
 
-    <!-- RESOURCES (your PDF categories) -->
+    <!-- RESOURCES -->
     <section class="resources" id="resources" aria-label="Resources">
       <h2>Resources</h2>
 
@@ -155,20 +165,32 @@
           </li>
         </ul>
       </div>
+    </section>
 
-      <div class="card subscribe-card">
-        <h3>Stay Updated</h3>
-        <p>Get updates on programs, opportunities, and community news.</p>
-        <a class="btn btn--primary filter-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdqnmV0eLs8Wn03ARVcEw1tLf6jSimphHYcZHvgdHLJ802cBQ/viewform" target="_blank" rel="noreferrer" data-filter="subscribe form updates">
-          Subscribe
-        </a>
+    <!-- SUBSCRIBE (Spectrum-style: yellow panel + image) -->
+    <section class="newsletter" aria-label="Newsletter">
+      <div class="newsletter-wrap">
+        <div class="newsletter-left">
+          <h2>Get our newsletter</h2>
+          <p>Updates on opportunities, community news, events, and more.</p>
+          <a class="newsletter-btn"
+             href="https://docs.google.com/forms/d/e/1FAIpQLSdqnmV0eLs8Wn03ARVcEw1tLf6jSimphHYcZHvgdHLJ802cBQ/viewform"
+             target="_blank" rel="noreferrer">
+            Subscribe
+          </a>
+        </div>
+
+        <div class="newsletter-right" aria-hidden="true">
+          <!-- Put ANY image you want here later (like a phone mockup).
+               If you don't have one, this will show a subtle pattern by default. -->
+          <div class="newsletter-img"></div>
+        </div>
       </div>
     </section>
 
-    <!-- BOTTOM: Featured News (left) + Events (right) -->
+    <!-- UPDATES -->
     <section class="updates" id="updates" aria-label="Updates">
       <div class="updates-grid">
-        <!-- Featured News -->
         <div class="news-col">
           <div class="section-heading">FEATURED NEWS</div>
 
@@ -189,18 +211,8 @@
               <p class="news-excerpt">Workshops for resumes, interviews, and networking with STEM-focused employers and alumni.</p>
             </div>
           </article>
-
-          <article class="news-item filter-item" data-filter="news social events community">
-            <div class="news-thumb news-thumb--three"></div>
-            <div class="news-body">
-              <a class="news-title" href="#" target="_blank" rel="noreferrer">Community socials: meet people without the pressure</a>
-              <div class="news-meta">December 3, 2025</div>
-              <p class="news-excerpt">Low-key socials designed for first-time attendees and anyone who wants a chill space to connect.</p>
-            </div>
-          </article>
         </div>
 
-        <!-- Events column -->
         <aside class="events-col" aria-label="Events">
           <div class="section-heading">EVENTS</div>
 
@@ -215,31 +227,38 @@
               <a class="event-link" href="#" target="_blank" rel="noreferrer">Read more</a>
             </div>
           </div>
-
-          <div class="event-card filter-item" data-filter="event queer reading nook">
-            <div class="event-image event-image--two"></div>
-            <div class="event-body">
-              <div class="event-title">The Queer Reading Nook</div>
-              <div class="event-meta">
-                <div><span class="event-label">Date:</span> 2026-02-02</div>
-                <div><span class="event-label">Location:</span> TBD</div>
-              </div>
-              <a class="event-link" href="#" target="_blank" rel="noreferrer">Read more</a>
-            </div>
-          </div>
-
-          <div class="event-card filter-item" data-filter="event lgbtea social">
-            <div class="event-image event-image--three"></div>
-            <div class="event-body">
-              <div class="event-title">LGBTea</div>
-              <div class="event-meta">
-                <div><span class="event-label">Date:</span> 2026-02-04</div>
-                <div><span class="event-label">Location:</span> TBD</div>
-              </div>
-              <a class="event-link" href="#" target="_blank" rel="noreferrer">Read more</a>
-            </div>
-          </div>
         </aside>
+      </div>
+    </section>
+
+    <!-- CONTACT BLOCK (Spectrum-style footer content) -->
+    <section class="contact-block" aria-label="Contact Information">
+      <div class="contact-inner">
+        <div class="contact-brand">
+          <img src="ostem-logo.png" alt="oSTEM Logo" class="contact-logo" />
+          <div class="contact-title">oSTEM @ UMich</div>
+        </div>
+
+        <div class="contact-info">
+          <div class="contact-heading">Contact Information</div>
+
+          <div class="contact-row">
+            <div class="contact-label">Address</div>
+            <div class="contact-value">
+              143 Chrysler Center<br/>
+              2121 Bonisteel Blvd<br/>
+              Ann Arbor, MI 48109<br/>
+              United States
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-label">Contact Email</div>
+            <div class="contact-value">
+              <a class="contact-link" href="mailto:oSTEM-board@umich.edu">oSTEM-board@umich.edu</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
