@@ -164,9 +164,9 @@ main{
 }
 
 /* Placeholder “photo” backgrounds (swap to real images later if you want) */
-.tile-media--one { background-image: linear-gradient(135deg, rgba(0,39,76,.85), rgba(0,0,0,.15)); }
-.tile-media--two { background-image: linear-gradient(135deg, rgba(255,203,5,.65), rgba(0,39,76,.85)); }
-.tile-media--three{ background-image: linear-gradient(135deg, rgba(0,39,76,.85), rgba(255,203,5,.35)); }
+.tile-media--one { background-image: url(community.jpg); }
+.tile-media--two { background-image: url(events.jpeg); }
+.tile-media--three{ background-image: url(ostem-logo.png); }
 
 .tile-label{
   position:absolute;
