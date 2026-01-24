@@ -41,8 +41,8 @@ body{
   left:50%;
   transform: translate(-50%, -50%);
 
-  width: 60%;
-  height: 25%;   /* TALLER top-bottom */
+  width: 78%;          /* SHORTER left-right */
+  min-height: 130px;   /* TALLER top-bottom */
 
   background: #00274C;
   color:#fff;
