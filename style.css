@@ -41,7 +41,7 @@ body{
   left:50%;
   transform: translate(-50%, -50%);
   width: 88%;
-  height: 140px;             /* fixed height so logo doesn't resize the bar */
+  height: 180px;             /* fixed height so logo doesn't resize the bar */
   background: var(--blue);
   color:#fff;
   border-radius: 12px;
