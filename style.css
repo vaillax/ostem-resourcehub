@@ -67,7 +67,7 @@ body{
 }
 
 .header-logo{
-  height: 62px;             /* you can increase this without changing bar height */
+  height: 80px;             /* you can increase this without changing bar height */
   width: auto;
   object-fit: contain;
   border-radius: 50%;
