@@ -1,30 +1,40 @@
-// Filter function
+function normalize(s) {
+  return (s || "").toLowerCase().trim();
+}
+
 function filterResources() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let sections = document.querySelectorAll("main section");
+  const q = normalize(document.getElementById("searchInput").value);
 
-  sections.forEach(section => {
-    let links = section.querySelectorAll("li");
-    let matchFound = false;
+  const items = document.querySelectorAll(".filter-item");
+  const cards = document.querySelectorAll(".card");
+  const resourceSection = document.getElementById("resources");
 
-    links.forEach(link => {
-      let text = link.textContent.toLowerCase();
-      if (text.includes(input)) {
-        link.style.display = "";
-        matchFound = true;
-      } else {
-        link.style.display = "none";
-      }
-    });
+  // If query empty: show everything
+  if (!q) {
+    items.forEach(el => (el.style.display = ""));
+    // also ensure containers are visible
+    cards.forEach(card => (card.style.display = ""));
+    if (resourceSection) resourceSection.style.display = "";
+    return;
+  }
 
-    // Hide section if no results
-    if (!matchFound && input !== "") {
-      section.style.display = "none";
-    } else {
-      section.style.display = "";
-    }
+  // Filter all items that have data-filter text, otherwise use visible text
+  items.forEach(el => {
+    const hay = normalize(el.getAttribute("data-filter")) || normalize(el.textContent);
+    el.style.display = hay.includes(q) ? "" : "none";
+  });
+
+  // Hide resource cards if none of their <li> are visible
+  cards.forEach(card => {
+    const lis = card.querySelectorAll("li.filter-item");
+    if (lis.length === 0) return; // skip cards without li items
+    const anyVisible = Array.from(lis).some(li => li.style.display !== "none");
+    card.style.display = anyVisible ? "" : "none";
   });
 }
 
-// Optional: filter while typing
+// button click
+document.getElementById("searchBtn").addEventListener("click", filterResources);
+
+// live typing
 document.getElementById("searchInput").addEventListener("keyup", filterResources);
