@@ -37,9 +37,9 @@ body{
 /* Long blue bar overlay (Spectrum-ish) */
 .blue-bar{
   position:absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
 
   width: 60%;
   height: 25%;   /* TALLER top-bottom */
