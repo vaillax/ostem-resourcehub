@@ -9,7 +9,6 @@
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body{
@@ -41,23 +40,20 @@ body{
   left:50%;
   transform: translate(-50%, -50%);
 
-  width: 72%;        /* shorter */
-  min-height: 120px; /* taller than before but not huge */
-  padding: 22px 28px;/* gives the “thick” Spectrum look */
+  width: 72%;            /* shorter (left-right) */
+  min-height: 120px;     /* taller (top-bottom) */
+  padding: 22px 28px;    /* thick look */
 
-
-  background: #00274C;
+  background: var(--blue);
   color:#fff;
   border-radius: 14px;
   box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 
-  padding: 40px 60px;  /* real vertical padding so it looks taller */
   display:flex;
   justify-content: space-between;
   align-items: center;
   gap: 18px;
 }
-
 
 .branding{
   display:flex;
@@ -67,7 +63,7 @@ body{
 }
 
 .header-logo{
-  height: 72px;             /* you can increase this without changing bar height */
+  height: 72px;
   width: auto;
   object-fit: contain;
   border-radius: 50%;
@@ -81,10 +77,13 @@ body{
   letter-spacing: 0.2px;
 }
 
-.nav-search{
+/* Right side: nav above search */
+.right-stack{
   display:flex;
-  align-items:center;
-  gap: 18px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
 }
 
 .top-nav{
@@ -111,8 +110,8 @@ body{
 }
 
 .search-box input{
-  width: 260px;        /* adjusts automatically with shorter bar */
-  max-width: 34vw;     /* prevents overflow on smaller screens */
+  width: 260px;     /* keep this as the single true value */
+  max-width: 34vw;
   padding: 10px 12px;
   border-radius: 12px;
   border: none;
@@ -123,12 +122,11 @@ body{
   padding: 10px 16px;
   border: none;
   border-radius: 12px;
-  background: #FFCB05;
-  color: #00274C;
+  background: var(--maize);
+  color: var(--blue);
   font-weight: 900;
   cursor:pointer;
 }
-
 
 .search-box button:hover{
   background:#fff;
@@ -180,7 +178,6 @@ main{
   filter: saturate(1.0);
 }
 
-/* Placeholder “photo” backgrounds (swap to real images later if you want) */
 .tile-media--one { background-image: url(community.jpg); }
 .tile-media--two { background-image: url(events.jpeg); }
 .tile-media--three{ background-image: url(visit.png); }
@@ -296,11 +293,6 @@ main{
 
 .card a:hover{ color: var(--maize); }
 
-.subscribe-card p{
-  margin: 0 0 12px;
-  color:#444;
-}
-
 /* ========= Bottom Updates Grid ========= */
 .updates{
   margin-top: 28px;
@@ -331,7 +323,6 @@ main{
   box-shadow: var(--shadow);
 }
 
-/* Placeholder thumbs */
 .news-thumb--one { background-image: linear-gradient(135deg, rgba(255,203,5,.7), rgba(0,39,76,.85)); }
 .news-thumb--two { background-image: linear-gradient(135deg, rgba(0,39,76,.85), rgba(255,203,5,.5)); }
 .news-thumb--three{ background-image: linear-gradient(135deg, rgba(0,0,0,.25), rgba(0,39,76,.85)); }
@@ -411,48 +402,7 @@ main{
   text-decoration: underline;
 }
 
-/* ========= Footer ========= */
-.footer{
-  text-align:center;
-  padding: 18px;
-  background: var(--blue);
-  color:#fff;
-  margin-top: 32px;
-}
-
-/* ========= Responsive ========= */
-@media (max-width: 980px){
-  .tile-grid{ grid-template-columns: 1fr; }
-  .updates-grid{ grid-template-columns: 1fr; }
-  .about-grid{ grid-template-columns: 1fr; }
-  .news-item{ grid-template-columns: 1fr; }
-  .news-thumb{ width: 100%; height: 160px; }
-  .blue-bar{ height:auto; padding: 14px; gap: 14px; }
-  .nav-search{ flex-direction: column; align-items:flex-end; }
-}
-
-/* --- HEADER RIGHT STACK (nav above search) --- */
-.right-stack{
-  display:flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 12px;
-}
-
-
-/* Make the blue bar shorter looking (less “stretched”) */
-.blue-bar{
-  width: 90%;
-  height: 86px;
-}
-
-/* Slightly tighter search */
-.search-box input{
-  width: 220px;
-}
-
-/* --- NEWSLETTER (Spectrum style) --- */
+/* ========= Newsletter (Spectrum style) ========= */
 .newsletter{
   margin-top: 26px;
 }
@@ -465,8 +415,8 @@ main{
   border-radius: 12px;
   overflow:hidden;
   box-shadow: var(--shadow);
-  max-width: 980px;     /* makes it NOT insanely long */
-  margin: 0 auto;       /* centers it */
+  max-width: 980px;
+  margin: 0 auto;
   background:#fff;
 }
 
@@ -505,14 +455,13 @@ main{
 }
 
 .newsletter-right{
-  background: #2f6fb2; /* similar blue panel */
+  background: #2f6fb2;
   position: relative;
 }
 
 .newsletter-img{
   width:100%;
   height:100%;
-  /* nice subtle pattern so it doesn't look empty */
   background-image:
     radial-gradient(rgba(255,255,255,0.18) 2px, transparent 2px),
     radial-gradient(rgba(255,255,255,0.14) 2px, transparent 2px);
@@ -520,12 +469,20 @@ main{
   background-size: 36px 36px;
 }
 
-/* --- CONTACT BLOCK (Spectrum-style footer content) --- */
+/* ========= CONTACT BLOCK (full-width, touches footer) =========
+   This matches your vision: one continuous blue section edge-to-edge,
+   no white gap, content stays centered. */
 .contact-block{
-  margin-top: 34px;
+  margin-top: 28px;
   background: var(--blue);
   color:#fff;
-  padding: 44px 18px;
+
+  /* full-bleed section */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  padding: 64px 18px;
 }
 
 .contact-inner{
@@ -595,11 +552,30 @@ main{
   opacity: 0.9;
 }
 
-/* Responsive */
+/* ========= Footer ========= */
+.footer{
+  text-align:center;
+  padding: 18px;
+  background: var(--blue);
+  color:#fff;
+  margin-top: 0; /* so it touches the contact section */
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 980px){
+  .tile-grid{ grid-template-columns: 1fr; }
+  .updates-grid{ grid-template-columns: 1fr; }
+  .about-grid{ grid-template-columns: 1fr; }
+  .news-item{ grid-template-columns: 1fr; }
+  .news-thumb{ width: 100%; height: 160px; }
+
+  .blue-bar{ width: 92%; }
+  .right-stack{ align-items: flex-start; }
+}
+
 @media (max-width: 900px){
   .newsletter-wrap{ grid-template-columns: 1fr; }
   .newsletter-left h2{ font-size: 38px; }
   .contact-inner{ grid-template-columns: 1fr; }
   .contact-row{ grid-template-columns: 1fr; }
-  .right-stack{ align-items: flex-start; }
 }
