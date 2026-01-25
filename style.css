@@ -9,11 +9,11 @@
 }
 
 * { box-sizing: border-box; }
+
 html{
   scroll-behavior: smooth;
   height: 100%;
 }
-
 
 body{
   margin:0;
@@ -25,7 +25,6 @@ body{
   display: flex;
   flex-direction: column;
 }
-
 
 /* ========= HERO ========= */
 .hero{
@@ -49,9 +48,9 @@ body{
   left:50%;
   transform: translate(-50%, -50%);
 
-  width: 72%;            /* shorter (left-right) */
-  min-height: 120px;     /* taller (top-bottom) */
-  padding: 22px 28px;    /* thick look */
+  width: 72%;
+  min-height: 120px;
+  padding: 22px 28px;
 
   background: var(--blue);
   color:#fff;
@@ -119,7 +118,7 @@ body{
 }
 
 .search-box input{
-  width: 260px;     /* keep this as the single true value */
+  width: 260px;
   max-width: 34vw;
   padding: 10px 12px;
   border-radius: 12px;
@@ -147,10 +146,9 @@ main{
   margin: 0 auto;
   padding: 26px 18px 40px;
 
-  flex: 1;
+  /* IMPORTANT: do NOT stretch main anymore */
   background: var(--bg);
 }
-
 
 .section-heading{
   font-size: 13px;
@@ -482,25 +480,31 @@ main{
   background-size: 36px 36px;
 }
 
-/* ========= CONTACT BLOCK (full-width, touches footer) =========
-   This matches your vision: one continuous blue section edge-to-edge,
-   no white gap, content stays centered. */
+/* ========= CONTACT BLOCK (full-width, reaches bottom) ========= */
 .contact-block{
   margin-top: 28px;
   background: var(--blue);
   color:#fff;
 
-  /* full-bleed section */
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
-  padding: 64px 18px;
+  padding: 64px 18px 26px;
+
+  /* makes this section "fill" the remaining viewport height if page is short */
+  flex: 1;
+
+  /* lets us pin "Made with love" to the bottom center */
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-inner{
   max-width: 980px;
   margin: 0 auto;
+  width: 100%;
+
   display:grid;
   grid-template-columns: 260px 1fr;
   gap: 30px;
@@ -565,13 +569,19 @@ main{
   opacity: 0.9;
 }
 
-/* ========= Footer ========= */
-.footer{
-  text-align:center;
-  padding: 18px;
-  background: var(--blue);
+/* Put your "Made with ❤️ ..." text inside .contact-block with class="made-with" */
+.made-with{
+  margin-top: auto;     /* pushes it to the bottom of the big blue box */
+  text-align: center;   /* bottom middle */
+  padding-top: 28px;    /* space above it */
   color:#fff;
-  margin-top: 0; /* so it touches the contact section */
+  font-weight: 700;
+}
+
+/* REMOVE / STOP USING .footer in your HTML (delete that element)
+   Keeping this here just in case, but it won't be used. */
+.footer{
+  display:none;
 }
 
 /* ========= Responsive ========= */
