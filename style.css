@@ -18,7 +18,7 @@ html{
 body{
   margin:0;
   font-family: Arial, sans-serif;
-  background: var(--bg);
+  background: var(--blue);
   color:#222;
 
   min-height: 100vh;
@@ -148,6 +148,7 @@ main{
   padding: 26px 18px 40px;
 
   flex: 1;
+  background: var(--bg);
 }
 
 
