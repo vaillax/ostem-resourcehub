@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resource hub for LGBTQ+ students and allies in STEM at the University of Michigan: events, community, health, funding, and crisis support." />
+  <title>oSTEM @ UMich | LGBTQ+ STEM Resource Hub</title>
+
+  <!-- Favicon (the round oSTEM logo) -->
+  <link rel="icon" type="image/png" href="ostem-logo.png" />
+
+  <!-- Social sharing previews (Discord, Instagram DMs, iMessage, etc.)
+       AFTER DEPLOYING: replace the two URLs below with your live site URL
+       and the full URL to the logo, e.g. https://yoursite.com/ostem-logo.png -->
+  <meta property="og:title" content="oSTEM @ UMich | LGBTQ+ STEM Resource Hub" />
+  <meta property="og:description" content="Events, community, health, funding, and crisis support for LGBTQ+ students and allies in STEM at the University of Michigan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ostem-resourcehub.com/" />
+  <meta property="og:image" content="https://ostem-resourcehub.com/ostem-logo.png" /> />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Fonts: Fraunces (headings) + Public Sans (body). Both have safe fallbacks. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Keyboard users can jump straight past the header -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <!-- Supply your own logo file named ostem-logo.png (square works best).
+             If the file is missing the alt text still identifies the org. -->
+        <img src="ostem-logo.png" alt="" class="brand-logo" width="56" height="56" onerror="this.style.display='none'" />
+        <a href="#main" class="brand-name">oSTEM <span class="brand-at">@</span> UMich</a>
+      </div>
+
+      <button type="button" id="menuBtn" class="menu-button" aria-expanded="false" aria-controls="siteNav" hidden>
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Main">
+        <a href="#events">Events</a>
+        <a href="#resources">Resources</a>
+        <a href="#connect">Get Involved</a>
+      </nav>
+
+      <!-- Search is hidden until JS loads, so nothing broken appears without it -->
+      <form class="search" id="searchForm" role="search" hidden>
+        <label for="searchInput" class="visually-hidden">Search resources and events</label>
+        <div class="search-row">
+          <svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+          </svg>
+          <input type="search" id="searchInput" name="q" autocomplete="off"
+                 placeholder="Search resources and events" />
+          <button type="button" id="clearSearch" class="clear-search" hidden>Clear</button>
+        </div>
+      </form>
+    </div>
+    <!-- Signature element: a thin pride rule closing the blue header band -->
+    <div class="pride-rule" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= CRISIS STRIP (always visible, never buried) ================= -->
+    <section class="crisis" aria-labelledby="crisis-heading">
+      <h2 id="crisis-heading">Need support right now?</h2>
+      <ul class="crisis-list">
+        <li>
+          <a href="https://spectrumcenter.umich.edu/student-support/crisis-response" target="_blank" rel="noreferrer">
+            Spectrum Center Crisis Response<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://caps.umich.edu/" target="_blank" rel="noreferrer">
+            U-M CAPS Counseling<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span>
+          </a>
+        </li>
+        <li><span class="crisis-phone">988 Suicide &amp; Crisis Lifeline: call or text <a href="tel:988">988</a></span></li>
+        <li><span class="crisis-phone">The Trevor Project (LGBTQ+ youth): <a href="tel:1-866-488-7386">1‑866‑488‑7386</a></span></li>
+        <li><span class="crisis-phone">Trans Lifeline: <a href="tel:1-877-565-8860">1‑877‑565‑8860</a></span></li>
+      </ul>
+    </section>
+
+    <!-- ================= INTRO ================= -->
+    <section class="intro" aria-labelledby="intro-heading">
+      <div class="intro-text">
+        <p class="eyebrow">Out in Science, Technology, Engineering &amp; Mathematics</p>
+        <h1 id="intro-heading">A home for LGBTQ+ students in STEM at Michigan.</h1>
+        <p class="intro-lede">
+          oSTEM builds community for LGBTQ+ students and allies across the University of Michigan: social events, mentorship, professional development, and a hub for the campus resources
+          that matter most. Everyone is welcome here.
+        </p>
+        <div class="intro-actions">
+          <a class="btn btn-blue" href="https://discord.gg/9WTUxWvD" target="_blank" rel="noreferrer">
+            Join our Discord<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span>
+          </a>
+          <a class="btn btn-maize" href="https://www.instagram.com/ostem_um/" target="_blank" rel="noreferrer">
+            Follow on Instagram<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span>
+          </a>
+        </div>
+      </div>
+      <div class="intro-art" aria-hidden="true">
+        <!-- Decorative, CSS-only artwork: maize/blue blocks with a pride edge.
+             Replace with a real photo later if you like (see README). -->
+        <div class="art-block art-a"></div>
+        <div class="art-block art-b"></div>
+        <div class="art-block art-c"></div>
+      </div>
+    </section>
+
+    <!-- Live region announcing search result counts to screen readers -->
+    <p id="searchStatus" class="search-status" role="status" aria-live="polite"></p>
+
+    <!-- ================= EVENTS ================= -->
+    <section class="events" id="events" aria-labelledby="events-heading">
+      <h2 id="events-heading">Upcoming events</h2>
+
+      <!-- JS renders event cards here from events.js -->
+      <div id="eventsList" class="events-grid"></div>
+
+      <!-- Past events get collected here by JS -->
+      <details id="pastEventsWrap" class="past-events" hidden>
+        <summary>Past events</summary>
+        <ul id="pastEventsList"></ul>
+      </details>
+
+      <!-- Shown if JS is off or events.js fails to load -->
+      <noscript>
+        <p class="events-fallback">
+          Event listings need JavaScript to display here. You can always see our full schedule on the
+          <a href="https://calendar.google.com/calendar/u/1?cid=dW1pY2guZWR1X3FlMWJucjh1cHJlNTFiYWhnaDluM2luYmNnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+             target="_blank" rel="noreferrer">oSTEM Google Calendar<span class="visually-hidden">(opens in new tab)</span></a>.
+        </p>
+      </noscript>
+
+      <p class="events-calendar-link">
+        <a href="https://calendar.google.com/calendar/u/1?cid=dW1pY2guZWR1X3FlMWJucjh1cHJlNTFiYWhnaDluM2luYmNnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+           target="_blank" rel="noreferrer">
+          View the full oSTEM Google Calendar<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span>
+        </a>
+      </p>
+    </section>
+
+    <!-- ================= RESOURCES ================= -->
+    <section class="resources" id="resources" aria-labelledby="resources-heading">
+      <h2 id="resources-heading" tabindex="-1">Resources</h2>
+      <p class="resources-hint">Use the search box in the header, or pick a category below.</p>
+
+      <div class="filter-chips" id="filterChips" role="group" aria-label="Filter resources by category" hidden>
+        <button type="button" class="chip is-active" data-category="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-category="social" aria-pressed="false">Social &amp; Community</button>
+        <button type="button" class="chip" data-category="health" aria-pressed="false">Health &amp; Wellness</button>
+        <button type="button" class="chip" data-category="funding" aria-pressed="false">Funding &amp; Scholarships</button>
+        <button type="button" class="chip" data-category="emergency" aria-pressed="false">Emergency Support</button>
+        <button type="button" class="chip" data-category="mentorship" aria-pressed="false">Mentorship &amp; Professional Development</button>
+      </div>
+
+      <div class="card-grid">
+
+        <article class="card" data-category="social">
+          <h3>Social &amp; Community</h3>
+          <ul class="resource-list">
+            <li class="filter-item" data-keywords="carrd link hub links linktree bio ostem website">
+              <a href="https://ostem-um.carrd.co/" target="_blank" rel="noreferrer">oSTEM @ UMich Link Hub<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>All our links in one place: forms, socials, and announcements.</p>
+            </li>
+            <li class="filter-item" data-keywords="discord chat community social join">
+              <a href="https://discord.gg/9WTUxWvD" target="_blank" rel="noreferrer">oSTEM Discord<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Our day-to-day community space: announcements, study groups, memes.</p>
+            </li>
+            <li class="filter-item" data-keywords="instagram social media photos follow">
+              <a href="https://www.instagram.com/ostem_um/" target="_blank" rel="noreferrer">Instagram @ostem_um<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Event photos, announcements, and community highlights.</p>
+            </li>
+            <li class="filter-item" data-keywords="calendar google events schedule dates">
+              <a href="https://calendar.google.com/calendar/u/1?cid=dW1pY2guZWR1X3FlMWJucjh1cHJlNTFiYWhnaDluM2luYmNnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank" rel="noreferrer">oSTEM Google Calendar<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Every meeting and event, always up to date.</p>
+            </li>
+            <li class="filter-item" data-keywords="spectrum center groups organizations orgs find lgbtq campus">
+              <a href="https://spectrumcenter.umich.edu/education-resources" target="_blank" rel="noreferrer">Find LGBTQ+ groups on campus (Spectrum Center)<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Directory of LGBTQ+ organizations and education resources at U-M.</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card" data-category="health">
+          <h3>Health &amp; Wellness</h3>
+          <ul class="resource-list">
+            <li class="filter-item" data-keywords="sexual health wellness spectrum center lgbtq">
+              <a href="https://spectrumcenter.umich.edu/health-wellness" target="_blank" rel="noreferrer">Spectrum Center Health &amp; Wellness<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>LGBTQ+-affirming health and wellness resources on campus.</p>
+            </li>
+            <li class="filter-item" data-keywords="sexual reproductive health wolverine wellness sti testing contraception">
+              <a href="https://wolverinewellness.umich.edu/sexual-reproductive-health" target="_blank" rel="noreferrer">Wolverine Wellness Sexual &amp; Reproductive Health<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Sexual health education, supplies, and support.</p>
+            </li>
+            <li class="filter-item" data-keywords="uhs university health service doctor clinic medical appointments">
+              <a href="https://uhs.umich.edu/" target="_blank" rel="noreferrer">University Health Service (UHS)<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Primary care, STI testing, gender-affirming care navigation, and more.</p>
+            </li>
+            <li class="filter-item" data-keywords="caps counseling mental health therapy psychological">
+              <a href="https://caps.umich.edu/" target="_blank" rel="noreferrer">Counseling &amp; Psychological Services (CAPS)<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Free, confidential mental health support for U-M students.</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card" data-category="funding">
+          <h3>Funding &amp; Scholarships</h3>
+          <ul class="resource-list">
+            <li class="filter-item" data-keywords="scholarships money funding spectrum lgbtq awards">
+              <a href="https://spectrumcenter.umich.edu/student-support/scholarships" target="_blank" rel="noreferrer">Spectrum Center Scholarships<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Scholarships for LGBTQ+ students and allies at U-M.</p>
+            </li>
+            <li class="filter-item" data-keywords="essential needs grant money funding basic food housing">
+              <a href="https://spectrumcenter.umich.edu/student-support/essential-needs-grant" target="_blank" rel="noreferrer">Essential Needs Grant<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Help covering basic needs like food, housing, and clothing.</p>
+            </li>
+            <li class="filter-item" data-keywords="project grants funding student org">
+              <a href="https://spectrumcenter.umich.edu/student-support/project-grants" target="_blank" rel="noreferrer">Spectrum Center Project Grants<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Funding for LGBTQ+-focused student projects and programming.</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card" data-category="emergency">
+          <h3>Emergency Support</h3>
+          <ul class="resource-list">
+            <li class="filter-item" data-keywords="crisis response spectrum emergency help urgent">
+              <a href="https://spectrumcenter.umich.edu/student-support/crisis-response" target="_blank" rel="noreferrer">Spectrum Center Crisis Response<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Support for students in crisis, including identity-related emergencies.</p>
+            </li>
+            <li class="filter-item" data-keywords="cew emergency funding money urgent">
+              <a href="https://cew.umich.edu/funding/emergency-funding/" target="_blank" rel="noreferrer">CEW+ Emergency Funding<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Emergency grants through the Center for the Education of Women+.</p>
+            </li>
+            <li class="filter-item" data-keywords="dean of students emergency funds funding money urgent">
+              <a href="https://deanofstudents.umich.edu/article/student-emergency-funds" target="_blank" rel="noreferrer">Dean of Students Emergency Funds<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>University emergency funds for unexpected financial hardship.</p>
+            </li>
+            <li class="filter-item" data-keywords="international center emergency fund funding students money">
+              <a href="https://internationalcenter.umich.edu/resources/student-funding/emergency-fund" target="_blank" rel="noreferrer">International Center Emergency Fund<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Emergency support specifically for international students.</p>
+            </li>
+            <li class="filter-item" data-keywords="rackham graduate emergency funding money">
+              <a href="https://rackham.umich.edu/funding/funding-types/rackham-graduate-student-emergency-funds/" target="_blank" rel="noreferrer">Rackham Graduate Student Emergency Funds<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Emergency funding for graduate students.</p>
+            </li>
+            <li class="filter-item" data-keywords="financial aid emergency loans funding money">
+              <a href="https://finaid.umich.edu/types-aid/loans/emergency-loans" target="_blank" rel="noreferrer">Financial Aid Emergency Loans<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>Short-term emergency loans through Financial Aid.</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card" data-category="mentorship">
+          <h3>Mentorship &amp; Professional Development</h3>
+          <ul class="resource-list">
+            <li class="filter-item" data-keywords="ostem national conference career jobs professional mentorship">
+              <a href="https://ostem.org/" target="_blank" rel="noreferrer">oSTEM National<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span></a>
+              <p>The national organization: annual conference, career fair, and mentoring programs.</p>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+      <p id="noResults" class="no-results" hidden>
+        No matches found. Try a different word, or
+        <a href="mailto:oSTEM-board@umich.edu">email us</a> and we'll point you in the right direction.
+      </p>
+    </section>
+
+    <!-- ================= CONNECT / NEWSLETTER ================= -->
+    <section class="connect" id="connect" aria-labelledby="connect-heading">
+      <div class="connect-inner">
+        <h2 id="connect-heading">Stay in the loop</h2>
+        <p>Get updates on events, opportunities, and community news. A few emails a semester, never spam.</p>
+        <a class="btn btn-blue"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSdqnmV0eLs8Wn03ARVcEw1tLf6jSimphHYcZHvgdHLJ802cBQ/viewform"
+           target="_blank" rel="noreferrer">
+          Subscribe to the newsletter<span class="ext" aria-hidden="true">↗</span><span class="visually-hidden">(opens in new tab)</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" id="contact">
+    <div class="pride-rule" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="ostem-logo.png" alt="" class="footer-logo" width="96" height="96" onerror="this.style.display='none'" />
+        <p class="footer-name">oSTEM @ UMich</p>
+      </div>
+      <div class="footer-contact">
+        <h2>Contact</h2>
+        <p><a href="mailto:oSTEM-board@umich.edu">oSTEM-board@umich.edu</a></p>
+      </div>
+      <div class="footer-note">
+        <p>Designed and built by Alexander V.</p>
+        <p class="footer-fine">oSTEM @ UMich is a student organization at the University of Michigan.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="toTop" class="to-top" aria-label="Back to top" hidden>↑</button>
+
+  <!-- events.js holds the editable event list; script.js renders + powers search -->
+  <script src="events.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
